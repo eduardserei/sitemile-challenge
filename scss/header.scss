@@ -1,0 +1,57 @@
+@import "./variables.scss";
+
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        //override max width to keep full screenX expansion
+        max-width: none;
+        .brand {
+            // font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            img {
+                width: 6rem;
+            }
+        }
+    
+        nav {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+    
+            .nav-links {
+                display: flex;
+                opacity: 0.7;
+                font-size: $fs-sm;
+                &__link {
+                    padding: 0 1rem;
+                }
+                @media screen and (max-width: $mobile-size) {
+                    display: none;
+                }
+            }
+    
+            .burger {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                height: $fs-md;
+                width: 1rem;
+                cursor: pointer;
+                .burger__line {
+                    height: 1px;
+                    margin: 1px;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.623);
+                }
+            }
+        }
+
+    }
+
+}

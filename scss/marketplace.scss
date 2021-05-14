@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.marketplace-section {
+    
+    &__container {
+        h2 {
+            font-weight: 300;
+        }
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 2rem;
+
+            @media screen and (max-width: $tablet-size) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            @media screen and (max-width: $mobile-size) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            .card {
+                position: relative;
+                border: $border-gray;
+                box-shadow: $shadow-subtle;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                .card-image {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        max-width: 2rem;
+                    }
+                }
+                .card-title {
+                    font-size: $fs-xs;
+                    font-weight: 400;
+                    height: 30%;
+                }
+            }
+        }
+    }
+
+
+}

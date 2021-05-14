@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+.container--y {
+  padding: 2rem 0;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container--y {
+    padding: 1rem;
+  }
+}
+
+.container--x {
+  padding: 0 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .container--x {
+    padding: 0 1rem;
+  }
+}
+
+.btn-primary {
+  background-color: #ef1831;
+  color: white;
+  border: none;
+  border: 1px solid #ef1831;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #000;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 24px;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.divider {
+  height: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+  .divider {
+    height: 2rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .divider {
+    height: 1rem;
+  }
+}
+
+.divider-xl {
+  height: 4rem;
+}
+
+@media screen and (max-width: 520px) {
+  .divider-xl {
+    height: 0rem;
+  }
+}
+/*# sourceMappingURL=general.css.map */

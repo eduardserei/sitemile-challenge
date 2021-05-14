@@ -1,0 +1,70 @@
+.marketplace-section__container h2 {
+  font-weight: 300;
+}
+
+.marketplace-section__container .cards-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .marketplace-section__container .cards-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .marketplace-section__container .cards-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+.marketplace-section__container .cards-container .card {
+  position: relative;
+  border: 1px solid gainsboro;
+  -webkit-box-shadow: -1px 3px 5px -2px rgba(0, 0, 0, 0.164);
+          box-shadow: -1px 3px 5px -2px rgba(0, 0, 0, 0.164);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.marketplace-section__container .cards-container .card .card-image {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.marketplace-section__container .cards-container .card .card-image img {
+  max-width: 2rem;
+}
+
+.marketplace-section__container .cards-container .card .card-title {
+  font-size: 12px;
+  font-weight: 400;
+  height: 30%;
+}
+/*# sourceMappingURL=marketplace.css.map */

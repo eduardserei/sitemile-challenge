@@ -1,0 +1,215 @@
+@import "./variables.scss";
+
+.hero {
+    border-bottom: 4px solid rgba(209, 209, 209, 0.247);
+    .hero__outer-container {
+        position: relative;
+        // height: 50vh;
+        @media (max-width: $custom-size) {
+            height: auto;
+        }
+        @media (max-width: $mobile-size) {
+            height: 100vh;
+            background-color: rgba(53, 126, 235, 0.507);
+        }
+
+        .hero__inner-container {
+            padding-top: 1rem;
+            padding-bottom: 8rem;
+            height: 100%;
+            @media (max-width: $mobile-size) {
+                padding-bottom: 0;
+            }
+            &__content {
+                width: 60%;
+                @media (max-width: $mobile-size) {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    padding-bottom: 3rem;
+                }
+
+                h1 {
+                    font-size: $fs-xl;
+                    font-weight: 500;
+                    padding: 2rem 0;
+                    @media (max-width: $mobile-size) {
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+                form {
+                    display: flex;
+                    width: 100%;
+                    @media (max-width: $custom-size) {
+                        flex-direction: column;
+                    }
+
+                    .form-item:first-child {
+                        width: 55%;
+                        min-width: 275px;
+                        border: 1px solid rgba(128, 128, 128, 0.226);
+                        border-right: none;
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                        // background-color: red;
+                        @media (max-width: $custom-size) {
+                            // border-top-right-radius: 5px;
+                            // border-bottom-right-radius: 5px;
+                            border: 1px solid rgba(128, 128, 128, 0.226);
+                            border-radius: 5px;
+                            width: 50%;
+                        }
+
+                        @media (max-width: $mobile-size) {
+                            width: 100%;
+                            min-width: 0;
+                        }
+
+                        .input-icon {
+                            left: 0.7rem;
+                        }
+                    }
+                    .form-item:nth-of-type(2) {
+                        width: 45%;
+                        .input-icon {
+                            left: 0.7rem;
+                        }
+                        border: 1px solid rgba(128, 128, 128, 0.226);
+                        border-left: none;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        // background-color: purple;
+                        @media (max-width: $custom-size) {
+                            border: 1px solid rgba(128, 128, 128, 0.226);
+                            border-radius: 5px;
+                            width: 275px;
+                        }
+                        @media (max-width: $mobile-size) {
+                            width: 100%;
+                        }
+                    }
+
+                    .form-item:nth-child(2)::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                        width: 1px;
+                        height: 1.5rem;
+                        background-color: $neutral-gray;
+                        @media (max-width: $custom-size) {
+                            display: none;
+                        }
+                    }
+
+                    .form-item {
+                        // background-color: red;
+                        position: relative;
+
+                        @media (max-width: $custom-size) {
+                            margin-bottom: 0.5rem;
+                        }
+
+                        input {
+                            appearance: none;
+                            padding: 0.7rem;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 5px;
+                            border: none;
+                            font-size: $fs-sm;
+                            padding-left: 2.5rem;
+                            @media (max-width: $mobile-size) {
+                                padding: 0.7rem 0;
+                                text-align: center;
+                                background-color: rgba(255, 255, 255, 0.74);
+                            }
+                        }
+
+                        .input-icon {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            max-width: 24px;
+                        }
+                        // remove decoration left side in input safari
+                        input::-webkit-search-decoration {
+                            display: none;
+                        }
+                    }
+
+                    button {
+                        padding: 0 1rem;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        font-size: $fs-sm;
+                        cursor: pointer;
+                        @media (max-width: $custom-size) {
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            width: 275px;
+                            padding: 0.5rem;
+                        }
+                        @media (max-width: $mobile-size) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .details-select__container{
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                @media (max-width: $mobile-size) {
+                    color: #fff;
+                    align-self: center;
+                }
+                img {
+                    width: 1rem;
+                    margin-right: 0.5rem;
+                    @media (max-width: $mobile-size) {
+                        filter: invert(1);
+                    }
+                }
+                p {
+                    font-size: $fs-xs;
+                    @media (max-width: $mobile-size) {
+                        font-size: $fs-sm;
+                        color: #fff;
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
+
+        .bkg-img-container {
+            position: absolute;
+            display: flex;
+            top: 0;
+            left: 60%;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            align-items: flex-end;
+            @media (max-width: $mobile-size) {
+                left: 0;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media (max-width: $custom-size) {
+                    position: absolute;
+                    object-position: left;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

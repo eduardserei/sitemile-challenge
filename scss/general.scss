@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import "./variables.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    // normally would NOT do outline none on everything
+    outline: none;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .container {
+      padding: 2rem;
+      max-width: 1024px;
+      margin: 0 auto;
+      @media screen and (max-width: $tablet-size) {
+        padding: 1rem;
+      }
+      &--y{
+        padding: 2rem 0;
+        max-width: 1024px;
+        margin: 0 auto;
+        @media screen and (max-width: $tablet-size) {
+          padding: 1rem;
+        }
+      }
+
+      &--x{
+        padding: 0 2rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        @media screen and (max-width: $tablet-size) {
+          padding: 0 1rem;
+        }
+      }
+  }
+
+  .btn-primary {
+    background-color: $acc-clr;
+    color: white;
+    border: none;
+    border: 1px solid $acc-clr;
+  }
+  .btn-primary:hover {
+    background-color: $acc-clr-hvr;
+    color: #000;
+  }
+
+  .title {
+    font-weight: 300;
+    font-size: $fs-lg;
+    padding: 1rem 0;
+    @media screen and (max-width: $tablet-size) {
+      text-align: center;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .divider {
+      height: 3rem;
+      @media screen and (max-width: $tablet-size) {
+        height: 2rem;
+      }
+      @media screen and (max-width: $mobile-size) {
+        height: 1rem;
+      }
+  }
+
+  .divider-xl {
+    height: 4rem;
+    @media screen and (max-width: $mobile-size) {
+      height: 0rem;
+    }
+  }
